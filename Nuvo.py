@@ -66,7 +66,7 @@ with ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [executor.submit(send_task, Phone) for _ in range(jam)]
             ThreadPoolExecutor.wait(futures) if hasattr(ThreadPoolExecutor, 'wait') else [f.result() for f in futures]
 
-     print("\x1b[92m[+] ส่งเสร็จสิ้นทั้งหมด\x1b[00m")
+print("\x1b[92m[+] ส่งเสร็จสิ้นทั้งหมด\x1b[00m")
 
 def api1(phone):
 	da = datetime.datetime.now()
